@@ -2,10 +2,16 @@
 #include <stdlib.h>
 #include <pthread.h>
 
+
 void *print_message_function( void *ptr );
 
-main()
+main(int argc, char* argv[])
 {
+    unsigned int noThreads = atoi(argv[1]);
+    unsigned long long startIndex = strtoull(argv[2], 0, 10);
+    unsigned long long endIndex = strtoull(argv[3], 0, 10);
+    
+     printf("Number of threads: %d, Start: %llu, End: %llu\n", noThreads, startIndex, endIndex);
      pthread_t thread1, thread2;
      const char *message1 = "Thread 1";
      const char *message2 = "Thread 2";

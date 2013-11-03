@@ -12,8 +12,6 @@
     <logicalFolder name="SourceFiles"
                    displayName="Source Files"
                    projectFiles="true">
-      <itemPath>RangeSum.cpp</itemPath>
-      <itemPath>RangeSum.h</itemPath>
       <itemPath>main.cpp</itemPath>
     </logicalFolder>
     <logicalFolder name="TestFiles"
@@ -44,6 +42,7 @@
         </cTool>
         <ccTool>
           <architecture>2</architecture>
+          <commandLine>-std=c++11</commandLine>
         </ccTool>
         <asmTool>
           <architecture>2</architecture>
@@ -55,10 +54,6 @@
           </linkerLibItems>
         </linkerTool>
       </compileType>
-      <item path="RangeSum.cpp" ex="false" tool="1" flavor2="0">
-      </item>
-      <item path="RangeSum.h" ex="false" tool="3" flavor2="0">
-      </item>
       <item path="main.cpp" ex="false" tool="1" flavor2="0">
       </item>
     </conf>
@@ -77,6 +72,7 @@
         <ccTool>
           <developmentMode>5</developmentMode>
           <architecture>2</architecture>
+          <commandLine>-std=c++11</commandLine>
         </ccTool>
         <fortranCompilerTool>
           <developmentMode>5</developmentMode>
@@ -92,10 +88,6 @@
           </linkerLibItems>
         </linkerTool>
       </compileType>
-      <item path="RangeSum.cpp" ex="false" tool="1" flavor2="0">
-      </item>
-      <item path="RangeSum.h" ex="false" tool="3" flavor2="0">
-      </item>
       <item path="main.cpp" ex="false" tool="1" flavor2="0">
       </item>
     </conf>

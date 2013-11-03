@@ -25,9 +25,15 @@
       <runprofile version="9">
         <runcommandpicklist>
           <runcommandpicklistitem>"${OUTPUT_PATH}"</runcommandpicklistitem>
+          <runcommandpicklistitem>"${OUTPUT_PATH}" 20 1 200</runcommandpicklistitem>
+          <runcommandpicklistitem>"${OUTPUT_PATH}" 1 1 1000000000</runcommandpicklistitem>
+          <runcommandpicklistitem>"${OUTPUT_PATH}" 20 1 100</runcommandpicklistitem>
+          <runcommandpicklistitem>"${OUTPUT_PATH}" 3 1 10</runcommandpicklistitem>
+          <runcommandpicklistitem>"${OUTPUT_PATH}" 4 1 10</runcommandpicklistitem>
           <runcommandpicklistitem>"${OUTPUT_PATH}" 20 1 1000000000</runcommandpicklistitem>
+          <runcommandpicklistitem>"${OUTPUT_PATH}" 30 1 1000000000</runcommandpicklistitem>
         </runcommandpicklist>
-        <runcommand>"${OUTPUT_PATH}" 20 1 1000000000</runcommand>
+        <runcommand>"${OUTPUT_PATH}" 30 1 1000000000</runcommand>
         <rundir></rundir>
         <buildfirst>true</buildfirst>
         <terminal-type>0</terminal-type>

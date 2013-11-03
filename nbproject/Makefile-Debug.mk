@@ -35,7 +35,6 @@ OBJECTDIR=${CND_BUILDDIR}/${CND_CONF}/${CND_PLATFORM}
 
 # Object Files
 OBJECTFILES= \
-	${OBJECTDIR}/RangeSum.o \
 	${OBJECTDIR}/main.o
 
 
@@ -43,8 +42,8 @@ OBJECTFILES= \
 CFLAGS=-m64
 
 # CC Compiler Flags
-CCFLAGS=-m64
-CXXFLAGS=-m64
+CCFLAGS=-m64 -std=c++11
+CXXFLAGS=-m64 -std=c++11
 
 # Fortran Compiler Flags
 FFLAGS=
@@ -61,11 +60,6 @@ LDLIBSOPTIONS=-lpthread
 
 parsum: ${OBJECTFILES}
 	${LINK.cc} -o parsum ${OBJECTFILES} ${LDLIBSOPTIONS}
-
-${OBJECTDIR}/RangeSum.o: RangeSum.cpp 
-	${MKDIR} -p ${OBJECTDIR}
-	${RM} $@.d
-	$(COMPILE.cc) -g -MMD -MP -MF $@.d -o ${OBJECTDIR}/RangeSum.o RangeSum.cpp
 
 ${OBJECTDIR}/main.o: main.cpp 
 	${MKDIR} -p ${OBJECTDIR}

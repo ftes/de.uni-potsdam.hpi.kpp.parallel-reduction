@@ -16,3 +16,7 @@
 # compiled executable
 parsum
 parsum.tar
+
+# output file
+output.txt
+

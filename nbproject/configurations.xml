@@ -12,6 +12,8 @@
     <logicalFolder name="SourceFiles"
                    displayName="Source Files"
                    projectFiles="true">
+      <itemPath>RangeSum.cpp</itemPath>
+      <itemPath>RangeSum.h</itemPath>
       <itemPath>main.cpp</itemPath>
     </logicalFolder>
     <logicalFolder name="TestFiles"
@@ -25,6 +27,7 @@
                    kind="IMPORTANT_FILES_FOLDER">
       <itemPath>Makefile</itemPath>
       <itemPath>nbproject/private/Makefile-variables.mk</itemPath>
+      <itemPath>output.txt</itemPath>
     </logicalFolder>
   </logicalFolder>
   <projectmakefile>Makefile</projectmakefile>
@@ -52,6 +55,10 @@
           </linkerLibItems>
         </linkerTool>
       </compileType>
+      <item path="RangeSum.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="RangeSum.h" ex="false" tool="3" flavor2="0">
+      </item>
       <item path="main.cpp" ex="false" tool="1" flavor2="0">
       </item>
     </conf>
@@ -85,6 +92,10 @@
           </linkerLibItems>
         </linkerTool>
       </compileType>
+      <item path="RangeSum.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="RangeSum.h" ex="false" tool="3" flavor2="0">
+      </item>
       <item path="main.cpp" ex="false" tool="1" flavor2="0">
       </item>
     </conf>

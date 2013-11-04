@@ -123,7 +123,6 @@ unsigned long long sumWithMultipleThreads(int noThreads, unsigned long long star
         struct Range *range = new Range;
         range->start = current;
         current += initialRangeSizePerThread;
-        unsigned long long threadEnd;
         range->end = current - 1;
         if (range->start > end) {
             break;
@@ -163,7 +162,7 @@ unsigned long long sumWithMultipleThreads(int noThreads, unsigned long long star
         localNoWorkerThreads = noWorkerThreads;
         localNoItemsToBeSummedUp = noItemsToBeSummedUp;
         pthread_mutex_unlock(&mutex);
-    } while (localNoWorkerThreads != 0 || noItemsToBeSummedUp != 1);
+    } while (localNoWorkerThreads != 0 || localNoItemsToBeSummedUp != 1);
 
     return toBeSummedUp->at(0);
 }

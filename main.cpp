@@ -98,11 +98,13 @@ void *rangeSumThread(void *args) {
 void *itemSumThread(void *args) {
     auto *items = (vector<unsigned long long> *) args;
     auto result = itemSum(items);
-    ostringstream itemString;
-    for (unsigned long long item : *items) {
-        itemString << item << ",";
+    if (debug) {
+    	ostringstream itemString;
+    	for (unsigned long long item : *items) {
+        	itemString << item << ",";
+    	}
+    	printf("Sum of %s: %llu\n", itemString.str().c_str(), result);
     }
-    if (debug) printf("Sum of %s: %llu\n", itemString.str().c_str(), result);
     finishedSummingUp(result);
     return NULL;
 }

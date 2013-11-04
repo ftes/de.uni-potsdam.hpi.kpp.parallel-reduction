@@ -1,21 +1,14 @@
-CXX=g++
-RM=rm -f
-CPPFLAGS=-g -Wall -std=c++11
-LDFLAGS=-g
-LDLIBS=-pthread
+CC=g++
+CFLAGS=-c -Wall -std=c++11 -pthread
+LDFLAGS=-pthread
+SOURCES=main.cpp
+OBJECTS=$(SOURCES:.cpp=.o)
+EXECUTABLE=parsum
 
-SRCS=main.cpp
-OBJS=$(subst .cpp,.o,$(SRCS))
-EXEC=parsum
+all: $(SOURCES) $(EXECUTABLE)
+	
+$(EXECUTABLE): $(OBJECTS) 
+	$(CC) $(LDFLAGS) $(OBJECTS) -o $@
 
-all: $(OBJS)
-	g++ $(LDFLAGS) -o $(EXEC) $(OBJS) $(LDLIBS)
-
-%.o: %.cpp
-	g++ -c $(CPPFLAGS) $(LDLIBS) -o $@ $<
-
-clean:
-	$(RM) $(OBJS)
-
-dist-clean: clean
-	$(RM) *~ .dependtool
+.cpp.o:
+	$(CC) $(CFLAGS) $< -o $@

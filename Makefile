@@ -5,13 +5,13 @@ LDFLAGS=-g
 LDLIBS=-pthread
 
 SRCS=main.cpp
-OBJS=main.o
+OBJS=$(subst .cpp,.o,$(SRCS))
 EXEC=parsum
 
-all: $(SRCS)
+all: $(OBJS)
 	g++ $(LDFLAGS) -o $(EXEC) $(OBJS) $(LDLIBS)
 
-%o: %cpp
+%.o: %.cpp
 	g++ -c $(CPPFLAGS) $(LDLIBS) -o $@ $<
 
 clean:

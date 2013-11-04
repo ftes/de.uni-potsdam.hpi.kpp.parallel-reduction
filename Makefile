@@ -1,6 +1,21 @@
-# First target (parsum) is the one automatically run
-parsum: main.o
-	g++ -std=c++11 -pthread -Wall -g -o parsum main.o
+CXX=g++
+RM=rm -f
+CPPFLAGS=-g -Wall -std=c++11
+LDFLAGS=-g
+LDLIBS=-pthread
 
-main.o: main.cpp
-	g++ -std=c++11 -g -c -pthread main.cpp
+SRCS=main.cpp
+OBJS=main.o
+EXEC=parsum
+
+all: $(SRCS)
+	g++ $(LDFLAGS) -o $(EXEC) $(OBJS) $(LDLIBS)
+
+%o: %cpp
+	g++ -c $(CPPFLAGS) $(LDLIBS) -o $@ $<
+
+clean:
+	$(RM) $(OBJS)
+
+dist-clean: clean
+	$(RM) *~ .dependtool
